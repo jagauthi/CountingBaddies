@@ -2,6 +2,7 @@ package com.example.androidapp.countingassholes;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -114,6 +115,14 @@ public class AddCarActivity extends AppCompatActivity {
     }
 
     public void submitCar() {
+        DBHandler dbHandler = new DBHandler(this, null, null, 1);
 
+        if(!selectedColor.equals("") && !selectedMake.equals("")) {
+            dbHandler.addCar(new CarPacket(1, selectedColor, selectedMake));
+            Log.d("DebuggingTag", "Inserted a car");
+        }
+        else {
+            Log.d("DebuggingTag", "Did not insert");
+        }
     }
 }

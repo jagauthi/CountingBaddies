@@ -17,16 +17,6 @@
         android:layout_centerVertical="true"
         android:padding="10dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=";)"
-            android:typeface="sans"
-            android:textSize="35sp"
-            android:textColor="#0088ff"
-            android:textStyle="bold"
-            android:gravity="center" />
-
         <Button
             android:layout_width="match_parent"
             android:layout_height="200dp"
@@ -38,6 +28,18 @@
             android:layout_marginTop="10dp"
             android:id="@+id/addCarButton"
             android:text="Add Car!" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#00DD00"
+            android:textColor="#000099"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/viewCarsButton"
+            android:text="View Cars" />
 
     </LinearLayout>
 </RelativeLayout>

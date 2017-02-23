@@ -9,18 +9,25 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnlogin;
+    Button addCarButton, viewCarsButton;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnlogin = (Button) findViewById(R.id.addCarButton);
-
-        btnlogin.setOnClickListener(new View.OnClickListener() {
+        addCarButton = (Button) findViewById(R.id.addCarButton);
+        addCarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 addCar();
+            }
+        });
+
+        viewCarsButton = (Button) findViewById(R.id.viewCarsButton);
+        viewCarsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewCars();
             }
         });
     }
@@ -28,6 +35,12 @@ public class MainActivity extends AppCompatActivity {
     public void addCar()
     {
         Intent intent = new Intent(this, AddCarActivity.class);
+        startActivity(intent);
+    }
+
+    public void viewCars()
+    {
+        Intent intent = new Intent(this, ViewCarsActivity.class);
         startActivity(intent);
     }
 }
