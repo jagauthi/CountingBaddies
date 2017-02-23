@@ -12,11 +12,11 @@
 
     <Button
         android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:background="#cccccc"
+        android:layout_height="40dp"
+        android:background="#dddddd"
         android:textColor="#000000"
         android:textStyle="bold"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:padding="10dp"
         android:layout_marginTop="10dp"
         android:id="@+id/whiteButton"
@@ -24,11 +24,11 @@
 
     <Button
         android:layout_width="150dp"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
         android:background="#000000"
         android:textColor="#ffffff"
         android:textStyle="bold"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:padding="10dp"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/whiteButton"
@@ -37,11 +37,11 @@
 
     <Button
         android:layout_width="150dp"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
         android:background="#cc0000"
         android:textColor="#ffffff"
         android:textStyle="bold"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:padding="10dp"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/blackButton"
@@ -50,11 +50,11 @@
 
     <Button
         android:layout_width="150dp"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
         android:background="#0000cc"
         android:textColor="#ffffff"
         android:textStyle="bold"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:padding="10dp"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/redButton"
@@ -63,11 +63,11 @@
 
     <Button
         android:layout_width="150dp"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
         android:background="#009900"
         android:textColor="#ffffff"
         android:textStyle="bold"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:padding="10dp"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/blueButton"
@@ -76,24 +76,24 @@
 
     <Button
         android:layout_width="150dp"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
         android:background="#995522"
         android:textColor="#ffffff"
         android:textStyle="bold"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:padding="10dp"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/greenButton"
-        android:id="@+id/otherButton"
+        android:id="@+id/otherColorButton"
         android:text="Other :O" />
 
     <Button
         android:layout_width="150dp"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
         android:background="#888888"
         android:textColor="#ffffff"
         android:textStyle="bold"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:padding="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="30dp"
@@ -103,11 +103,11 @@
 
     <Button
         android:layout_width="150dp"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
         android:background="#888888"
         android:textColor="#ffffff"
         android:textStyle="bold"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:padding="10dp"
         android:layout_alignTop="@+id/blackButton"
         android:layout_marginLeft="30dp"
@@ -117,16 +117,52 @@
 
     <Button
         android:layout_width="150dp"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
         android:background="#888888"
         android:textColor="#ffffff"
         android:textStyle="bold"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:padding="10dp"
         android:layout_alignTop="@+id/redButton"
         android:layout_marginLeft="30dp"
         android:layout_toRightOf="@+id/redButton"
-        android:id="@+id/otherotherButton"
+        android:id="@+id/otherCarButton"
         android:text="Other" />
+
+    <Button
+        android:text="Submit"
+        android:background="#ff08f0"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_width="150dp"
+        android:layout_height="fill_parent"
+        android:layout_alignRight="@+id/otherCarButton"
+        android:id="@+id/submitButton"
+        android:layout_alignTop="@+id/colorText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_alignLeft="@+id/otherColorButton"
+        android:layout_below="@+id/otherColorButton"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:id="@+id/colorText"
+        tools:text="Color: White" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_alignLeft="@+id/otherColorButton"
+        android:layout_below="@+id/colorText"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:id="@+id/makeText"
+        tools:text="Make: Ford" />
 
 </RelativeLayout>
