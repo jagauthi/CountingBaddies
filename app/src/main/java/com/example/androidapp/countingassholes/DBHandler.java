@@ -5,6 +5,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.content.Context;
 import android.content.ContentValues;
 import android.database.Cursor;
+import android.util.Log;
+
+import java.util.ArrayList;
 
 public class DBHandler extends SQLiteOpenHelper {
 
@@ -44,7 +47,6 @@ public class DBHandler extends SQLiteOpenHelper {
         String query = "Select * FROM " + TABLE_NAME + " WHERE id = " + id;
 
         SQLiteDatabase db = this.getWritableDatabase();
-
         Cursor cursor = db.rawQuery(query, null);
 
         CarPacket packet = new CarPacket();
@@ -61,6 +63,24 @@ public class DBHandler extends SQLiteOpenHelper {
         }
         db.close();
         return packet;
+    }
+
+    public ArrayList<CarPacket> getAllCars() {
+        ArrayList<CarPacket> results = new ArrayList<CarPacket>();
+        String query = "Select * FROM " + TABLE_NAME;
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+
+        if(cursor.moveToFirst())
+            cursor.moveToFirst();
+        for(int i = 0; i < cursor.getCount(); i++) {
+            results.add(new CarPacket(cursor.getString(1), cursor.getString(2)));
+            cursor.moveToNext();
+        }
+
+        db.close();
+        return results;
     }
 
     public boolean deleteCar(int id) {
@@ -81,5 +101,11 @@ public class DBHandler extends SQLiteOpenHelper {
         }
         db.close();
         return result;
+    }
+
+    public void deleteAllCars() {
+        String query = "Delete FROM " + TABLE_NAME;
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL(query);
     }
 }

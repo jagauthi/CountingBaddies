@@ -10,7 +10,7 @@ import android.widget.TextView;
 public class AddCarActivity extends AppCompatActivity {
 
     Button whiteButton, blackButton, redButton, blueButton, greenButton, otherColorButton;
-    Button fordButton, dodgeButton, otherCarButton;
+    Button fordButton, dodgeButton, chevyButton, pontiacButton, hondaButton, otherCarButton;
     Button submitButton;
 
     TextView colorText, makeText;
@@ -73,6 +73,9 @@ public class AddCarActivity extends AppCompatActivity {
 
         fordButton = (Button)findViewById(R.id.fordButton);
         dodgeButton = (Button)findViewById(R.id.dodgeButton);
+        chevyButton = (Button)findViewById(R.id.chevyButton);
+        pontiacButton = (Button)findViewById(R.id.pontiacButton);
+        hondaButton = (Button)findViewById(R.id.hondaButton);
         otherCarButton = (Button)findViewById(R.id.otherCarButton);
 
         fordButton.setOnClickListener(new View.OnClickListener() {
@@ -85,6 +88,24 @@ public class AddCarActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 selectMake("Dodge");
+            }
+        });
+        chevyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectMake("Chevy");
+            }
+        });
+        pontiacButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectMake("Pontiac");
+            }
+        });
+        hondaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectMake("Honda");
             }
         });
         otherCarButton.setOnClickListener(new View.OnClickListener() {
@@ -119,6 +140,8 @@ public class AddCarActivity extends AppCompatActivity {
 
         if(!selectedColor.equals("") && !selectedMake.equals("")) {
             dbHandler.addCar(new CarPacket(1, selectedColor, selectedMake));
+            colorText.setText("");
+            makeText.setText("");
             Log.d("DebuggingTag", "Inserted a car");
         }
         else {

@@ -16,17 +16,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/loadCarsButton"
+        android:background="#0000ff"
+        android:padding="10dp"
+        android:textColor="#ffffff"
         android:layout_margin="10dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
 
+    <Button
+        android:text="Delete All Cars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/deleteCarsButton"
+        android:background="#ff0000"
+        android:padding="10dp"
+        android:textColor="#ffffff"
+        android:layout_margin="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
-        android:id="@+id/linearLayout"
+        android:id="@+id/carList"
         android:layout_below="@+id/loadCarsButton"
         android:padding="10dp">
     </LinearLayout>
+
+
 </RelativeLayout>
